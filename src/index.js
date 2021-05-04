@@ -126,7 +126,7 @@
 // sumFunc(...arr1);
 
 // まとめる
-const arr2 = [1, 2, 3, 4, 5];
+// const arr2 = [1, 2, 3, 4, 5];
 // const [num1, num2, num3, num4, num5] = arr2;
 // console.log(num1);
 // console.log(num2);
@@ -134,19 +134,19 @@ const arr2 = [1, 2, 3, 4, 5];
 // console.log(num4);
 // console.log(num5);
 
-const [...arr3] = arr2;
+// const [...arr3] = arr2;
 // console.log(num1);
 // console.log(num2);
-console.log(arr3);
+// console.log(arr3);
 
 // 配列のコピー、結合
-const arr4 = [10, 20];
-const arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-const arr6 = [...arr4];
-arr6[0] = 100;
-console.log(arr6);
-console.log(arr4);
+// const arr6 = [...arr4];
+// arr6[0] = 100;
+// console.log(arr6);
+// console.log(arr4);
 
 // const arr7 = [...arr4, ...arr5];
 // console.log(arr7);
@@ -158,3 +158,35 @@ console.log(arr4);
 // arr8[0] = 100;
 // console.log(arr8);
 // console.log(arr4);
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+const naemArr = ["田中", "山田", "Rocky"];
+
+// 従来
+// for (let index = 0; index < naemArr.length; index++) {
+//   console.log(`${index + 1}番目は${naemArr[index]}`);
+// }
+
+// map
+// const naemArr2 = naemArr.map((name) => {
+//   return name;
+// })
+// console.log(naemArr2);
+
+// naemArr.map((name, index) => console.log(`${index + 1}番目は${name}です。`));
+
+// filter
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => num % 2 === 0);
+// console.log(newNumArr);
+
+const newNameArr = naemArr.map((name) => {
+  if (name === "Rocky") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+console.log(newNameArr);
