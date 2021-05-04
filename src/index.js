@@ -97,10 +97,16 @@
 // console.log(message2);
 
 // 配列にも使える
-const myProfile = ["Rocky", 41];
-const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
-console.log(message3);
+// const myProfile = ["Rocky", 41];
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+// console.log(message3);
 
-const [name, age] = myProfile;
-const message4 = `名前は${name}です。年齢は${age}歳です。`;
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}歳です。`;
+// console.log(message4);
+
+/**
+ * デフォルト値, 引数など
+ */
+const sayHello = (name = "ゲスト") => console.log(`こんにちは!${name}さん`);
+sayHello("Rocky");
